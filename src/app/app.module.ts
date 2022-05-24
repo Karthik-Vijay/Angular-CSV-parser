@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewTransactionsComponent } from './view-transactions/view-transactions.component';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { ExportCsvComponent } from './export-csv/export-csv.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ViewTransactionsComponent
+    ViewTransactionsComponent,
+    ExportCsvComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,12 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+const baseUrl = '/api/msp/business-banking';
 
 export const environment = {
-  production: false
+  production: false,
+  downloadAuditTrailsUrl: `${baseUrl}/downloads`,
+  // Download Format Values
+  downloadFormat_CSV: 'CSV_EXPORT',
+  allowedSearchChars:
+    // eslint-disable-next-line no-control-regex
+    /[\u0000-\u003B\u003D\u003F-\u005A\u005C\u005E-\u02FF\u0370-\u04FF\u1E00-\u20CF\u2100-\u23FF\u2500-\u26FF\uE000-\uF8FF\uFB00-\uFB4F\uFFF0-\uFFFF]/,
+  supportedMonths: 96,
 };
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
